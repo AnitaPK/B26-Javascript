@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<input id="inputOne" />
+<button onclick="demoOne();">click me to show input</button>
+<br>
+<p id="show-number1"></p>
+<button onclick="showAlertMgs();">Click me to show alert mgs</button><br>
+<button onclick="printPage();">Click me to print page</button>
+
+<table>
+    <tr>
+    <th>name</th>
+    <th>Address</th>
+    <th>Sallary</th>
+</tr>
+<tr>
+    <td>aditi</td>
+    <td>Pune</td>
+    <td>1000000</td>
+</tr>
+<tr>
+    <td>aditi</td>
+    <td>Pune</td>
+    <td>1000000</td>
+</tr>
+</table>
+
+<button onclick="funWrite();">cliock me to show mgs from write</button>
+
+
+
+    <script>
+        console.log('Hello world');
+
+        number1 = prompt("Enter first number");
+        console.log(number1);
+        document.getElementById('show-number1').innerHTML = number1;
+    </script>
+    <script>
+        function demoOne(){
+            inputFromID = document.getElementById('inputOne');
+            inputBYID = inputFromID.value; 
+            console.log(inputBYID);  
+            document.getElementById('show-number1').innerHTML = inputBYID;
+        }
+    </script>
+    <script>
+        function showAlertMgs(){
+            alert('Hello from alert');
+        }
+        function printPage(){
+            print();
+        }
+document.write('Hello from write.... ');
+function funWrite(){
+document.write('Hello from onclick write function.... ');
+
+}
+    </script>
+</body>
+</html>

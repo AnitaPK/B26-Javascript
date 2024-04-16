@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divFormat{
+            background-color: bisque;
+            color: brown;
+            padding: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="showContent"></div>
+
+<button onclick="showText();">click me to show text</button>
+<button id="showTextID">click me to show Date</button>
+<button id="showDivID">click me to show Banner</button>
+    <script>
+        function showText(){
+            document.getElementById('showContent').innerHTML = 'Welcome ...';
+        }
+
+// document.getElementById('showTextID');
+const btn1 = document.querySelector('#showTextID');
+
+btn1.addEventListener('click',()=>{
+    document.getElementById('showContent').innerHTML = Date();
+})
+
+
+document.getElementById('showDivID').addEventListener('click',()=>{
+        parentDiv = document.getElementById('showContent');
+        newElment = document.createElement('div');
+        newElment.className = 'divFormat';
+        newElment.innerHTML = `
+                                <h1>Welcome To Wisdom Sprouts</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis blanditiis li
+                                    bero laboriosam dolor deleniti illum harum odit ullam pariatur placeat?</p>
+                                `;
+        parentDiv.appendChild(newElment);
+})
+
+
+    </script>
+</body>
+</html>

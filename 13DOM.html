@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:hover{
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, excepturi!</p>
+    <p id="chageContent">lor sit amet consect Lorem ipsum doetur.</p>
+    <button id="changeText">Show Date</button>
+
+    <p  onmouseover="this.style.color = 'blue';" onmouseout="this.style.color = 'black';">Lorem ipsum dolor sit.</p>
+
+    <p id="changColor">Lorem ipsum dolor sit amet.</p>
+
+
+<script>
+    document.querySelector('p').innerHTML = 'Hello World';
+
+document.getElementById('changeText').addEventListener('click', function(){
+    document.querySelector('#chageContent').innerHTML = Date();
+});
+
+
+
+document.querySelector('#changColor').addEventListener('mouseover',()=>{
+    document.querySelector('#changColor').style.color = 'green'
+})
+
+
+document.querySelector('#changColor').addEventListener('mouseout',()=>{
+    document.querySelector('#changColor').style.color = 'black';
+})
+
+</script>
+
+
+    <!-- <script>
+        // pCollection = document.getElementsByTagName('p');
+        pCollection = document.querySelectorAll('p');
+
+        console.log(pCollection);
+
+        getElementById, getElementsByClassName, getElementsTagName,  =HTMLcollection
+        querySelector, querySelectorAll      NodeColl
+
+
+        querySelector('p')
+        querySelector('#idName')
+        querySelector('.className')
+
+
+        querySelectorAll('div')     
+        querySelectorAll('#ID')
+        querySelectorAll('.CLASS')
+
+
+
+        addEventListener('EventName', )
+
+
+        function addToCart(){};
+        document.querySelector('#addTOCArt').addEventListener('click', addToCart);
+
+
+        document.   <html></html>
+
+   </script>
+
+        <button onclick="addToCart();">add To cart</button>
+        <button id="addTOCArt">Add to cart</button>
+<script>
+window.addEventListener('load', functionName);
+
+document.body.appendChild()
+
+
+</script> -->
+
+</body>
+</html>

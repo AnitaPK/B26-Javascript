@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .listClass{
+            color: rgb(251, 251, 251);
+            background-color: blue;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+    <!-- <script>
+        document.getElementById('ID')
+
+        document.getElementsByClassName('ClassName')   HTMLAllCollection 
+
+        document.getElementsByTagName('tagName')
+
+        document.querySelector('#IDName') 
+        document.querySelector('.className')
+        document.querySelector('tagName')
+
+        document.querySelectorAll('#IDName') 
+        document.querySelectorAll('.className')
+        document.querySelectorAll('tagName')
+      
+      for attribute select
+        </script> -->
+
+<button id="changeColor" >Click me to change color</button>
+<script>
+    changeColorName = document.getElementById('changeColor');
+
+    function clickToChangheColor(){
+
+
+var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+console.log(Math.floor(Math.random()*16777215).toString(16));
+changeColorName.style.color = randomColor;
+document.body.style.backgroundColor = randomColor;
+}
+    
+
+    changeColorName.addEventListener('click', clickToChangheColor)
+</script>
+
+<div id="parent" style="border: 1px solid black;"></div>
+
+
+<script>
+    heading = 'HTML';
+    para1 = "Hyper Text Markup Language";
+    parentDiv = document.getElementById('parent');
+
+
+   
+
+    h1Elmt = document.createElement('h1');
+    console.log(h1Elmt);
+
+    h1Elmt.innerHTML = heading;
+    console.log(h1Elmt);
+
+    parentDiv.appendChild(h1Elmt);
+
+    pElmt = document.createElement('p');
+
+    paraDetails =document.createTextNode(para1);
+    console.log(paraDetails);
+
+    pElmt.appendChild(paraDetails);
+    console.log(pElmt);
+
+    parentDiv.appendChild(pElmt);
+
+</script>
+
+<ul id="parentUL"></ul>
+<ul id="parentDiv1"></ul>
+
+<script>
+    arr1 = ['Mango', 'chickoo', 'Cherry','Apple','Banana'];
+    parentul = document.getElementById('parentUL');
+
+arr1.forEach(element => {
+    liElmn = document.createElement('li');
+    liElmn.className = 'listClass';
+    liElmn.innerHTML = element;
+    console.log(liElmn);
+    parentul.appendChild(liElmn);
+    
+});
+
+
+arr2 = ['Laptop',30000,'Dell']
+parentdiv1 = document.getElementById('parentDiv1');
+
+
+
+arr2.forEach(value=>{
+    liElmn1 = document.createElement('li');
+    liElmn1.innerHTML = value;
+    console.log(liElmn1);
+    parentdiv1.appendChild(liElmn1);
+})
+
+
+
+</script>
+
+</body>
+</html>

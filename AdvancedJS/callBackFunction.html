@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div id="showDigital"></div>
+
+    <script>
+        function GreetingOne(d1){
+            console.log('Welcome ' + d1);
+        }
+        function MyFuncton(callbackFunc){
+            setTimeout(()=>{
+                data='Wisdom';
+                callbackFunc(data)},5000);
+        }
+
+        MyFuncton(GreetingOne);
+
+
+// setInterval(()=>{
+//     console.log(Date()),
+//     1000});
+
+
+setInterval(()=>{
+date = new Date();
+// console.log(date);
+console.log(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+// document.write(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+document.getElementById('showDigital').innerHTML = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()}
+,1000)
+// function greeting(FirstName){
+//     console.log('Welcome:'+ FirstName)
+// }
+
+
+// greeting('Wisdom');
+
+
+   
+    </script>
+</body>
+</html>

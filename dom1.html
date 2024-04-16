@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    div.black{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-color: black;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 20px;
+    }
+    div.blue{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-color: blue;
+        border-radius: 50%;
+        /* border: 1px solid black; */
+        margin-right: 20px;
+
+    }
+    div.white{
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-color: rgb(249, 249, 249);
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 20px;
+    }
+    .titleCar{
+        background-color: black;color: aliceblue;width: fit-content; padding: 3px;border-radius: 5px;
+    }
+</style>  
+</head>
+  <body>
+      
+    <div class="card" style="width: 18rem;">
+        <img src="./black1.webp" class="card-img-top" alt="..." id="changeImage">
+        <div class="card-body">
+          <h5 class="card-title titleCar" id="cardTitle">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p><div class="black"></div><div class="white" onclick="showWhiteCar();"></div><div class="blue" onclick="showBlueCar();"></div></p>
+          <a href="#" type="button" class="btn btn-dark" id="buttonClick">Go somewhere</a>
+        </div>
+      </div>
+
+
+      <script>
+
+        function showWhiteCar(){
+            document.getElementById('changeImage').src = './white.webp';
+            document.getElementById('cardTitle').style.backgroundColor='white';
+            document.getElementById('cardTitle').style.color='black';
+            document.getElementById('buttonClick').className = 'btn-light';
+        }
+        function showBlueCar(){
+            document.getElementById('changeImage').src = './blue.webp';
+            document.getElementById('cardTitle').style.backgroundColor='blue';
+            document.getElementById('cardTitle').style.color='white';
+            document.getElementById('buttonClick').className = 'btn btn-primary';
+        }
+
+
+        </script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

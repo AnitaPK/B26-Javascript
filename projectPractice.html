@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .divTask{
+            width:16rem;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-row align-items-center">
+          <div class="col-auto">
+            <label for="inlineFormInput">Add Task Name</label>
+            <input type="text" class="form-control mb-2" id="InputTaskName" >
+          </div>
+          <div class="col-auto">
+            <label for="inlineFormInputGroup">Discription</label>
+           
+              <input type="text" class="form-control" id="InputTaskDiscri" >
+          </div>
+        
+          <div class="col-auto">
+            <button class="btn btn-primary mb-2" onclick="addNewTask();">Submit</button>
+          </div>
+        </div>
+      </form>
+
+<div id="parentTask"></div>
+
+
+    <script>
+        function toConvertUpperCase(text){
+            return text.toUpperCase();
+        }
+        console.log(toConvertUpperCase('this is working'));
+        // upperText = toConvertUpperCase('this is working');
+
+arr1 = [2,6,-10,22,-5];
+
+        function positiveNumbers(array){
+           return array.filter(element=>element >0);
+
+            // foreach,map,filter,some,include
+        }
+        console.log(positiveNumbers(arr1));
+// const persons = [{id:1,name:'John',email:'john@gmail.com'},
+//           {id:2,name:'Tom',email:'tom@gmail.com'},
+//           {id:3,name:'Jerry',email:'jerry@gmail.com'}];
+
+
+//           function showPerson(){
+//             persons.forEach(elmn=>{
+//                 console.log(elmn.name);
+//             })
+//           }
+        
+//         showPerson();
+
+
+const persons = [{id:1,taskName:'Task 1',discription:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, laborum.'},
+          {id:2,taskName:'Task 2',discription:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, laborum.'},
+          {id:3,taskName:'Task 3',discription:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, laborum.'}];
+
+const tasks = {
+    allTask:[],
+    id:1,
+    taskName:'',
+    discription:'',
+    showTask:()=>{},
+    // addNewTask:()=>{},
+    editTask:()=>{}
+}
+
+
+const parentTaskLists = document.getElementById('parentTask')
+          function showTask(){
+            persons.forEach(elmn=>{
+                // console.log(elmn.taskName);
+                newtask = document.createElement('div');
+                newtask.className = 'divTask';
+                newtask.innerHTML = `
+                                        <h1>${elmn.taskName}</h1>
+                                        <p>${elmn.discription}</p>
+                                        <button class="btn btn-primary">Edit</button><button class="btn btn-primary ml-2">Delete</button>
+                                    `;
+                parentTaskLists.appendChild(newtask);
+            })
+          }
+        
+        showTask();
+          tasks.addNewTask = ()=>{
+            newTaskName = document.getElementById('InputTaskName').value;
+            newTaskDiscri = document.getElementById('InputTaskDiscri').value;
+            newTask ={
+                id:4,
+                name:newTaskName,
+                discription:newTaskDiscri
+            }
+            tasks.allTask.push(newTask);
+            console.log(allTask);
+
+          }
+newPara = document.createElement('p');
+console.log(newPara);
+
+newPara.innerHTML = 'This is paraghraph';
+
+document.body.appendChild(newPara);
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
