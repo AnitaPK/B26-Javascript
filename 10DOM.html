@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="showText"></p>
+
+    <button onclick="showText1()"> click me to show text</button>
+    <button id="BtnText"> click me to show text</button>
+
+
+<p id="headText">Trust Your Ability</p>
+<button id="FontWeightChange"> click me to show text</button>
+
+
+    <script>
+        btn = document.getElementById('BtnText');
+        btn.addEventListener('click', showText1);  
+        function showText1(){
+        document.getElementById('showText').innerHTML = 'Paragraph from Javascipt';
+        }
+    </script>
+    <script>
+        btn1  = document.getElementById('FontWeightChange');
+        btn1.addEventListener('click', ()=>{
+            str1 = document.getElementById('headText');
+            str1.style.color = 'red';
+            // str1.style.fontWeight = 'bold';
+            console.log(str1.style.fontWeight);
+            if(str1.style.fontWeight == 'normal'){
+                    str1.style.fontWeight = 'bold';
+            }else{
+                str1.style.fontWeight = 'normal';
+            }
+        }); 
+    </script>
+
+</body>
+</html>
